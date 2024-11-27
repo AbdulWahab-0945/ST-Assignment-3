@@ -22,8 +22,8 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: '11'
-        distribution: 'adoptopenjdk'  # This specifies the JDK distribution
+        distribution: 'temurin'  # Use temurin instead of adoptopenjdk
 
     - name: Build with Maven
       run: mvn clean install
-      working-directory: ./  # Make sure this is pointing to the directory with pom.xml
+      working-directory: ./  # Make sure this points to the directory with pom.xml
