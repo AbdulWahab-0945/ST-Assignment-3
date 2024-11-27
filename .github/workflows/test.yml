@@ -22,7 +22,8 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: '11'
+        distribution: 'adoptopenjdk'  # This specifies the JDK distribution
 
     - name: Build with Maven
       run: mvn clean install
-      working-directory: ./  # This ensures the Maven command is run in the directory containing pom.xml
+      working-directory: ./  # Make sure this is pointing to the directory with pom.xml
